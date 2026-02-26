@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientPack.GUIClasses.LoggedInController">
+    <ScrollPane fitToWidth="true" prefHeight="698.0" prefWidth="780.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="50">
+        <VBox fx:id="libraryContainer" spacing="10">
+        </VBox>
+    </ScrollPane>
+   <Label layoutX="10.0" layoutY="14.0" prefHeight="32.0" prefWidth="61.0" text="Username:" />
+   <Label fx:id="userLabel" layoutX="71.0" layoutY="22.0" />
+   <TextField fx:id="Search_Bar" layoutX="326.0" layoutY="18.0" onKeyReleased="#Search_Bar_KeyReleased" />
+   <Label layoutX="281.0" layoutY="21.0" text="Search:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Button fx:id="Logout_Button" layoutX="14.0" layoutY="761.0" mnemonicParsing="false" onAction="#Logout_Button_Click" text="Logout" />
+   <HBox alignment="CENTER_RIGHT" layoutX="476.0" layoutY="9.0" prefHeight="41.0" prefWidth="314.0">
+      <children>
+         <Button fx:id="My_Holds" mnemonicParsing="false" onAction="#My_Holds_Click" text="My Holds" />
+         <Button fx:id="CheckedOutBooks_Button" mnemonicParsing="false" onAction="#CheckedOutBooks_Button_Click" text="Personal Library" />
+         <MenuButton fx:id="Profile_Button" mnemonicParsing="false" text="Profile">
+            <items>
+               <MenuItem fx:id="ChangePassword_MenuItem" onAction="#ChangePassword_MenuItem_Click" text="Change Password" />
+            </items>
+         </MenuButton>
+         <Button fx:id="Refresh_Button" mnemonicParsing="false" onAction="#Refresh_Button_Click" text="Refresh" />
+      </children>
+   </HBox>
+</AnchorPane>

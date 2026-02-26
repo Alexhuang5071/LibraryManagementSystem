@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientPack.GUIClasses.LibraryItemDetailsController">
+    <top>
+        <Label fx:id="itemTitle" style="-fx-font-weight: bold; -fx-font-size: 24;" BorderPane.alignment="CENTER" />
+    </top>
+    <center>
+        <HBox spacing="20">
+            <ImageView fx:id="itemImage" fitHeight="525.0" fitWidth="385.0" preserveRatio="true" />
+            <VBox spacing="10">
+                <HBox>
+                    <Label style="-fx-font-size: 16;" text="Type: " />
+                    <Label fx:id="itemType" style="-fx-font-size: 16;" />
+                </HBox>
+                <HBox>
+                    <Label fx:id="Authors_Label" style="-fx-font-size: 16;" text="Authors: " />
+                    <Label fx:id="itemAuthors" style="-fx-font-size: 16;" />
+                </HBox>
+                <HBox>
+                    <Label fx:id="Pages_Label" style="-fx-font-size: 16;" text="Pages: " />
+                    <Label fx:id="itemPages" style="-fx-font-size: 16;" />
+                </HBox>
+                <HBox>
+                    <Label style="-fx-font-size: 16;" text="Availability: " />
+                    <Label fx:id="itemAvailability" style="-fx-font-size: 16;" />
+                </HBox>
+                <HBox>
+                    <Label style="-fx-font-size: 16;" text="Description: " />
+                </HBox>
+                 <Label fx:id="itemDescription" prefWidth="450" style="-fx-font-size: 16;" wrapText="true" />
+                <HBox>
+                    <Label style="-fx-font-size: 16;" text="Last Checked Out: " />
+                    <Label fx:id="itemLastCheckedOut" style="-fx-font-size: 16;" />
+                </HBox>
+                <HBox>
+                    <Label style="-fx-font-size: 16;" text="Previously Checked Out Users: " />
+                    <Label fx:id="itemCheckedOutUsers" maxWidth="450" style="-fx-font-size: 16;" wrapText="true" />
+                </HBox>
+                <HBox>
+                    <Label style="-fx-font-size: 16;" text="Currently Checked Out by: " />
+                    <Label fx:id="itemCurrentlyCheckedOutBy" style="-fx-font-size: 16;" />
+                </HBox>
+            <HBox prefHeight="18.0" prefWidth="450.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="74.0" style="-fx-font-size: 16;" text="Hold List:" />
+                  <Label fx:id="Holds_List" style="-fx-font-size: 16;" />
+               </children>
+            </HBox>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="Checkout_Button" mnemonicParsing="false" onAction="#Checkout_Button_Click" prefHeight="40.0" prefWidth="150.0" text="Checkout" />
+            <Button fx:id="Close_Button" mnemonicParsing="false" onAction="#Close_Button_Click" prefHeight="40.0" prefWidth="150.0" text="Close" />
+        </HBox>
+    </bottom>
+</BorderPane>

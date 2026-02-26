@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="263.0" prefWidth="798.0" spacing="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientPack.GUIClasses.LibraryItemController">
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <children>
+            <ImageView fx:id="itemImage" fitHeight="237.0" fitWidth="195.0" preserveRatio="true" />
+            <Button fx:id="Checkout_Button" mnemonicParsing="false" onAction="#Checkout_Button_Click" prefHeight="25.0" prefWidth="195.0" text="Checkout" />
+        </children>
+    </VBox>
+    <VBox prefHeight="200.0" prefWidth="636.0" spacing="5">
+        <Hyperlink fx:id="itemTitle" onAction="#itemTitleClicked" style="-fx-font-weight: bold;" underline="true" />
+        <HBox>
+            <Label text="Type: " />
+            <Label fx:id="itemType" />
+        </HBox>
+        <HBox>
+            <Label fx:id="Authors_Label" text="Authors: " />
+            <Label fx:id="itemAuthors" />
+        </HBox>
+        <HBox>
+            <Label fx:id="Pages_Label" text="Pages: " />
+            <Label fx:id="itemPages" />
+        </HBox>
+        <HBox>
+            <Label text="Availability: " />
+            <Label fx:id="itemAvailability" />
+        </HBox>
+        <VBox fx:id="descriptionVBox" maxWidth="600" prefWidth="600" spacing="5">
+         <HBox prefHeight="16.0" prefWidth="593.0">
+            <children>
+               <Label maxWidth="72.0" minWidth="-Infinity" prefHeight="17.0" prefWidth="72.0" text="Description:" />
+            </children>
+         </HBox>
+            <Label fx:id="itemDescription" prefHeight="109.0" prefWidth="513.0" wrapText="true" />
+            <HBox>
+                <Label text="Last Checked Out: " />
+                <Label fx:id="itemLastCheckedOut" />
+            </HBox>
+            <HBox>
+                <Label text="Currently Checked Out by: " />
+                <Label fx:id="itemCurrentlyCheckedOutBy" />
+            </HBox>
+         <HBox prefHeight="77.0" prefWidth="593.0">
+            <children>
+               <Label prefHeight="17.0" prefWidth="56.0" text="Hold List:" />
+               <Label fx:id="Hold_List" prefHeight="17.0" />
+            </children>
+         </HBox>
+        </VBox>
+    </VBox>
+</HBox>
